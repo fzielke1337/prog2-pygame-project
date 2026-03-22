@@ -5,6 +5,7 @@
 | Name | Matrikelnummer | FH-Mail |
 |------|----------------|---------|
 | Florian Zielke | 951907 | florian.zielke@stu.haw-kiel.de |
+| Johanna Wieber | ? | johanna.wieber@stu.haw-kiel.de |
 
 ## Spielidee
 
