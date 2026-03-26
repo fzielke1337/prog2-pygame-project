@@ -10,7 +10,8 @@
 ## Spielidee
 
 Die konkrete Spielidee wurde im Team noch abgestimmt.
-Geplant ist das Spiel "Sokoban"
+Geplant ist das Spiel 
+## "Sokoban"
 
 Aufgabenverteilung?!
 Zur Aufteilung, damit main.py nicht Kraut und Rüben wird, sollten wir alle Parts ob Level oder Spieler, Kisten etc. in Dateien auslagern. Die können wir mit game.py alle einfach miteinander verbinden bzw. einbinden.
@@ -18,12 +19,12 @@ Zur Aufteilung, damit main.py nicht Kraut und Rüben wird, sollten wir alle Part
 Beispiel der Dateien:
 Für Sokoban würde ich erstmal diese .py-Dateien anlegen:
 
-main.py
-game.py
-player.py
-level.py
-box.py
-settings.py
+## main.py
+## game.py
+## player.py
+## level.py
+## box.py
+## settings.py
 
 main.py
 Soll man anscheinend Bauen damit Startet einfach nur das Spiel. Einstiegspunkt.
@@ -43,14 +44,15 @@ Kisten separat, damit wir das Verhalten nicht in player oder level quetschen mü
 settings.py (Hab ich mir noch nicht angeschaut)
 Soll anscheinend wichtig sein für Fenstergröße, Tilegröße, FPS.
 
-##Florian
+## Florian
 
 player.py
 Bewegungslogik
 
-##Johanna
+## Johanna
 
 level.py
+
 Kollisionsprüfung
 offen: Assets finden
 
