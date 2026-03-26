@@ -12,8 +12,12 @@ pygame.display.set_caption("PROG2 Spielprojekt")
 clock = pygame.time.Clock()
 
 player = pygame.Rect(100, 100, 60, 60)
-# Wall erstellt mithilfe von ChatGPT (verstanden und angepasst)
-wall = pygame.Rect(300, 200, 200, 40)
+
+# Wände erstellt durch Ausprobieren
+wall_top = pygame.Rect(0, 0, 800, 10)
+wall_bottom = pygame.Rect(0, 590, 800, 10)
+wall_left = pygame.Rect(0, 0, 10, 600)
+wall_right = pygame.Rect(790, 0, 10, 600)
 
 # Kollision auf False setzen
 collision_active = False
@@ -39,7 +43,13 @@ while running:
     if keys[pygame.K_DOWN]:
         player.y += 5
 
-    if player.colliderect(wall):
+    # Nur 1 Mal Crash printen, kein Durchlaufen durch die Wand
+    if (
+        player.colliderect(wall_top) 
+        or player.colliderect(wall_bottom) 
+        or player.colliderect(wall_left) 
+        or player.colliderect(wall_right)
+        ):
         if not collision_active:
             print("Crash")
             collision_active = True
@@ -48,10 +58,13 @@ while running:
     else: 
         collision_active = False
 
-        
+
     screen.fill((30, 30, 30))
     pygame.draw.rect(screen, (255, 0, 0), player)
-    pygame.draw.rect(screen, (0, 255, 0), wall)
+    pygame.draw.rect(screen, (0, 255, 0), wall_top)
+    pygame.draw.rect(screen, (0, 255, 0), wall_bottom)
+    pygame.draw.rect(screen, (0, 255, 0), wall_left)
+    pygame.draw.rect(screen, (0, 255, 0), wall_right)
 
     pygame.display.flip()
     clock.tick(60)
