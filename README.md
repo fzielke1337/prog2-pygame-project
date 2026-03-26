@@ -43,11 +43,12 @@ Kisten separat, damit wir das Verhalten nicht in player oder level quetschen mü
 settings.py (Hab ich mir noch nicht angeschaut)
 Soll anscheinend wichtig sein für Fenstergröße, Tilegröße, FPS.
 
-Florian
+##Florian
 
 player.py
 Bewegungslogik
-Johanna
+
+##Johanna
 
 level.py
 Kollisionsprüfung
