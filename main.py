@@ -15,6 +15,8 @@ player = pygame.Rect(100, 100, 60, 60)
 # Wall erstellt mithilfe von ChatGPT (verstanden und angepasst)
 wall = pygame.Rect(300, 200, 200, 40)
 
+# Kollision auf False setzen
+collision_active = False
 
 running = True
 while running:
@@ -38,10 +40,15 @@ while running:
         player.y += 5
 
     if player.colliderect(wall):
-        print("Crash!")
+        if not collision_active:
+            print("Crash")
+            collision_active = True
         player.x = old_x
         player.y = old_y
+    else: 
+        collision_active = False
 
+        
     screen.fill((30, 30, 30))
     pygame.draw.rect(screen, (255, 0, 0), player)
     pygame.draw.rect(screen, (0, 255, 0), wall)
