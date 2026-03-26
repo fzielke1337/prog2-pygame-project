@@ -19,6 +19,18 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+    # Tasteneingaben prüfen
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT]:
+        player.x -= 5
+    if keys[pygame.K_RIGHT]:
+        player.x += 5
+    if keys[pygame.K_UP]:
+        player.y -= 5
+    if keys[pygame.K_DOWN]:
+        player.y += 5
+
     screen.fill((30, 30, 30))
     pygame.draw.rect(screen, (255, 0, 0), player)
 
