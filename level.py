@@ -4,14 +4,22 @@ from settings import WIDTH, HEIGHT
 # Level Map erstellt mit Außenwänden
 level_map = [
     "##########",
+    "#.......S#",
+    "#.########",
     "#........#",
+    "########.#",
     "#........#",
+    "#.########",
     "#........#",
+    "########.#",
+    "#Z.......#",
     "##########"
 ]
 
 walls = []
-tile_size = 100
+tile_size = 60
+
+
 
 for zeile_index, zeile in enumerate(level_map):
     for spalte_index, feld in enumerate(zeile):

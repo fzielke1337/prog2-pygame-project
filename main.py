@@ -12,7 +12,7 @@ pygame.display.set_caption("PROG2 Spielprojekt")
 
 clock = pygame.time.Clock()
 
-player = pygame.Rect(100, 100, 60, 60)
+player = pygame.Rect(480, 60, 60, 60)
 
 
 # Kollision auf False setzen
@@ -51,10 +51,11 @@ while running:
             player.y = old_y
    
 
-    # Wände und Spieler darstellen
+    # Spieler darstellen
     screen.fill((30, 30, 30))
     pygame.draw.rect(screen, (255, 0, 0), player)
    
+    # Wände darstellen
     for wall in walls: 
         pygame.draw.rect(screen, (0, 255, 0), wall)
 
