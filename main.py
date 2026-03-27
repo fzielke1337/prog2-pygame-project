@@ -2,7 +2,7 @@ import pygame
 import sys
 
 from level import walls
-from settings import WIDTH, HEIGHT
+from settings import WIDTH, HEIGHT, BACKGROUND_COLOR, WALL_COLOR, PLAYER_COLOR, TILE_SIZE
 
 pygame.init()
 
@@ -12,7 +12,7 @@ pygame.display.set_caption("PROG2 Spielprojekt")
 
 clock = pygame.time.Clock()
 
-player = pygame.Rect(480, 60, 60, 60)
+player = pygame.Rect(480, 60, TILE_SIZE, TILE_SIZE)
 
 
 # Kollision auf False setzen
@@ -36,16 +36,16 @@ while running:
         
 
             if event.key == pygame.K_LEFT:
-                player.x -= 60
+                player.x -= TILE_SIZE
                 moved = True
             elif event.key == pygame.K_RIGHT:
-                player.x += 60
+                player.x += TILE_SIZE
                 moved = True
             elif event.key == pygame.K_UP:
-                player.y -= 60
+                player.y -= TILE_SIZE
                 moved = True
             elif event.key == pygame.K_DOWN:
-                player.y += 60
+                player.y += TILE_SIZE
                 moved = True
 
     # Nur 1 Mal Crash printen, kein Durchlaufen durch die Wand
@@ -63,12 +63,12 @@ while running:
    
 
     # Spieler darstellen
-    screen.fill((30, 30, 30))
-    pygame.draw.rect(screen, (255, 0, 0), player)
+    screen.fill(BACKGROUND_COLOR)
+    pygame.draw.rect(screen, PLAYER_COLOR, player)
    
     # Wände darstellen
     for wall in walls: 
-        pygame.draw.rect(screen, (0, 255, 0), wall)
+        pygame.draw.rect(screen, WALL_COLOR, wall)
 
 
     pygame.display.flip()

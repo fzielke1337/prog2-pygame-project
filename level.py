@@ -1,5 +1,5 @@
 import pygame
-from settings import WIDTH, HEIGHT
+from settings import WIDTH, HEIGHT, TILE_SIZE
 
 # Level Map erstellt mit Außenwänden
 level_map = [
@@ -17,10 +17,10 @@ level_map = [
 ]
 
 walls = []
-tile_size = 60
+tile_size = TILE_SIZE
 
 
-
+# Wände aus Level-Map generieren (Durchläuft die Level-Map und erstellt für jedes Wand Feld # ein pygame.Rect Objekt)
 for zeile_index, zeile in enumerate(level_map):
     for spalte_index, feld in enumerate(zeile):
         if feld == "#":
