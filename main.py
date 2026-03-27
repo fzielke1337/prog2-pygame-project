@@ -2,11 +2,10 @@ import pygame
 import sys
 
 from level import walls
+from settings import WIDTH, HEIGHT
 
 pygame.init()
 
-WIDTH = 800
-HEIGHT = 600
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("PROG2 Spielprojekt")

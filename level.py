@@ -1,12 +1,22 @@
 import pygame
 from settings import WIDTH, HEIGHT
 
+level_map = [
+    "##########"
+    "#........#"
+    "#........#"
+    "#........#"
+    "##########"
+]
 
-# Wände erstellt durch Ausprobieren
-wall_top = pygame.Rect(0, 0, WIDTH, 10)
-wall_bottom = pygame.Rect(0, 590, WIDTH, 10)
-wall_left = pygame.Rect(0, 0, 10, HEIGHT)
-wall_right = pygame.Rect(790, 0, 10, HEIGHT)
+walls = []
+tile_size = 80
 
-# Alle Wände in Liste
-walls = [wall_top, wall_bottom, wall_left, wall_right]
+for zeile_index, zeile in enumerate(level_map):
+    for spalte_index, feld in enumerate(zeile):
+        if feld == "#":
+            x = spalte_index * tile_size
+            y = zeile_index * tile_size
+            wall = pygame.Rect(x, y, tile_size, tile_size)
+            walls.append(wall)
+
