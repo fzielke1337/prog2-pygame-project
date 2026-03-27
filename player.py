@@ -2,7 +2,8 @@
 #Hier kommt der Spieler rein, incl der Verlinkung zu den Assets
 #Der Spieler wird die Abfrage an level.py schicken. Aktuell Walls(Liste) 
 #Das Level entscheidet ob der Spieler sich bewegt oder nicht bzw die Walls die geladen wurden
-
+import pygame
+from settings import TILE_SIZE
 
 class Player:
     def __init__(self, x, y):                               #Konstruktor: erhält Startposition des Spielers (vom Level übergeben)
