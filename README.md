@@ -35,10 +35,10 @@ Für Sokoban würde ich erstmal diese .py-Dateien anlegen:
 ## settings.py
 
 main.py
-Soll man anscheinend Bauen damit Startet einfach nur das Spiel. Einstiegspunkt.
+Startet einfach nur das Spiel
 
 game.py
-Damit verbinden wir alles miteinander. Game-Loop, Updates, Zeichnen, Übergabe zwischen Player und Level.
+Damit verbinden wir später alles miteinander. Game-Loop, Zeichnen, Übergabe zwischen Player und Level.
 
 player.py
 Alles was den Spieler betrifft wie Position, Bewegung, Animationen.
@@ -53,15 +53,10 @@ settings.py (Hab ich mir noch nicht angeschaut)
 Soll anscheinend wichtig sein für Fenstergröße, Tilegröße, FPS.
 
 ## Florian
-
-player.py
-Bewegungslogik
-
+box.py erstellen
 ## Johanna
-
 level.py
 
-Kollisionsprüfung
 offen: Assets finden
 
 Kisten und und und
