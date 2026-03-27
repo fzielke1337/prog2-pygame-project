@@ -1,16 +1,17 @@
 import pygame
 from settings import WIDTH, HEIGHT
 
+# Level Map erstellt mit Außenwänden
 level_map = [
-    "##########"
-    "#........#"
-    "#........#"
-    "#........#"
+    "##########",
+    "#........#",
+    "#........#",
+    "#........#",
     "##########"
 ]
 
 walls = []
-tile_size = 80
+tile_size = 100
 
 for zeile_index, zeile in enumerate(level_map):
     for spalte_index, feld in enumerate(zeile):
