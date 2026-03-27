@@ -9,6 +9,7 @@
 
 ## Spielidee
 
+<<<<<<< HEAD
 Titel: Blob Adventure
 
 Unser Spiel soll im Stil von klassischen Sokoban- und Pushy-Spielen ein 2D-Levelspiel werden, bei dem der Spieler eine kleine Figur (Blob) durch verschiedene Level manövriert bis hin zum Ausgang. 
@@ -20,3 +21,53 @@ Dabei soll jedes Level andere Schwierigkeiten und Überraschungen bereithalten. 
 - Unsichtbar-Level, Blob ist unsichtbar und man sieht nur seine Aktionen
 - Rutsch-Level, Blob bewegt sich nicht mehr Kästchenweise, sondern Bewegung läuft automatisch und flüssig weiter
 - Telepotations- oder Farbfelder, Schlüssel- und Schlossfelder oder ähnliches
+=======
+Die konkrete Spielidee wurde im Team noch abgestimmt.
+Geplant ist das Spiel 
+## "Sokoban"
+
+Aufgabenverteilung?!
+Zur Aufteilung, damit main.py nicht Kraut und Rüben wird, sollten wir alle Parts ob Level oder Spieler, Kisten etc. in Dateien auslagern. Die können wir mit game.py alle einfach miteinander verbinden bzw. einbinden.
+
+Beispiel der Dateien:
+Für Sokoban würde ich erstmal diese .py-Dateien anlegen:
+
+## main.py
+## game.py
+## player.py
+## level.py
+## box.py
+## settings.py
+
+main.py
+Soll man anscheinend Bauen damit Startet einfach nur das Spiel. Einstiegspunkt.
+
+game.py
+Damit verbinden wir alles miteinander. Game-Loop, Updates, Zeichnen, Übergabe zwischen Player und Level.
+
+player.py
+Alles was den Spieler betrifft wie Position, Bewegung, Animationen.
+
+level.py
+Alles rund um das Spielfeld herum was damit zusammen hängt. Map, Wände, Ziele, freie Felder, später Kollisionen.
+
+box.py
+Kisten separat, damit wir das Verhalten nicht in player oder level quetschen müssen?! ggf später andere Sorten noch ergänzen
+
+settings.py (Hab ich mir noch nicht angeschaut)
+Soll anscheinend wichtig sein für Fenstergröße, Tilegröße, FPS.
+
+## Florian
+
+player.py
+Bewegungslogik
+
+## Johanna
+
+level.py
+
+Kollisionsprüfung
+offen: Assets finden
+
+Kisten und und und
+>>>>>>> 313956a6e61d50eec74a654bac3abf8f90ced0ad
