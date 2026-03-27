@@ -34,9 +34,11 @@ while running:
 
  #           old_x = player.x               übernimmt player.py
  #           old_y = player.y               übernimmt player.py
+
+        #Bewegungen auf Tastatur abfragen
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                moved = player.move(-TILE_SIZE, 0, walls)
+                moved = player.move(-TILE_SIZE, 0, walls)   #player.move erwartet immer 3 Angaben (TILE_SIZE X-Achse, TILE_SIZE Y-Achse, liste walls))
             elif event.key == pygame.K_RIGHT:
                 moved = player.move(TILE_SIZE, 0, walls)
             elif event.key == pygame.K_UP:
@@ -44,7 +46,7 @@ while running:
             elif event.key == pygame.K_DOWN:
                 moved = player.move(0, TILE_SIZE, walls)
 
-            if moved is False:
+            if moved is False:                              #Wenn player.moved nicht geht(False zurückgegeben wird), dann Fehlermeldung -> "Crash"
                 print("Crash")        
 
 #            if event.key == pygame.K_LEFT:
@@ -76,10 +78,10 @@ while running:
 
     # Spieler darstellen
     screen.fill(BACKGROUND_COLOR)
-    player.draw(screen, PLAYER_COLOR) #Klasse übernimmt nun
+    player.draw(screen, PLAYER_COLOR)               #Klasse Player übernimmt nun Jeder durchgang wird der Player "gezeichnet"
    
     # Wände darstellen
-    for wall in walls: 
+    for wall in walls:                              #Jeder durchgang werden die Wände gezeichnet
         pygame.draw.rect(screen, WALL_COLOR, wall)
 
 

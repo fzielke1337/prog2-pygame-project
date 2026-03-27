@@ -25,4 +25,4 @@ class Player:
         return True                                         #Wenn keine kollision denn True
 
     def draw(self, screen, color):                          #Methode Spieler wird an der stelle gezeichnet.
-        pygame.draw.rect(screen, color, self.rect)          #zeichnet auf dem bildschirm, in farbe des spielers, an der position self.rect
+        pygame.draw.rect(screen, color, self.rect)          #zeichnet auf dem bildschirm, in farbe des spielers, an der position self.rect ein Quadrat
