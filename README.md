@@ -9,7 +9,6 @@
 
 ## Spielidee
 
-<<<<<<< HEAD
 Titel: Blob Adventure
 
 Unser Spiel soll im Stil von klassischen Sokoban- und Pushy-Spielen ein 2D-Levelspiel werden, bei dem der Spieler eine kleine Figur (Blob) durch verschiedene Level manövriert bis hin zum Ausgang. 
@@ -20,11 +19,7 @@ Dabei soll jedes Level andere Schwierigkeiten und Überraschungen bereithalten. 
 - Schalter, auf die eine Kiste geschoben werden muss, damit die Tür offen bleibt
 - Unsichtbar-Level, Blob ist unsichtbar und man sieht nur seine Aktionen
 - Rutsch-Level, Blob bewegt sich nicht mehr Kästchenweise, sondern Bewegung läuft automatisch und flüssig weiter
-- Telepotations- oder Farbfelder, Schlüssel- und Schlossfelder oder ähnliches
-=======
-Die konkrete Spielidee wurde im Team noch abgestimmt.
-Geplant ist das Spiel 
-## "Sokoban"
+- Telepotations- oder Farbfelder, Schlüssel- und Schlossfelder oder ähnliches 
 
 Aufgabenverteilung?!
 Zur Aufteilung, damit main.py nicht Kraut und Rüben wird, sollten wir alle Parts ob Level oder Spieler, Kisten etc. in Dateien auslagern. Die können wir mit game.py alle einfach miteinander verbinden bzw. einbinden.
@@ -70,4 +65,3 @@ Kollisionsprüfung
 offen: Assets finden
 
 Kisten und und und
->>>>>>> 313956a6e61d50eec74a654bac3abf8f90ced0ad
