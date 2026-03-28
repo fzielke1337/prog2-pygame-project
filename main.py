@@ -48,7 +48,7 @@ while running:
         pygame.draw.rect(screen, WALL_COLOR, wall)
 
     # Ziel darstellen
-    goal_rect = pygame.rect(goal_x, goal_y, TILE_SIZE, TILE_SIZE)
+    goal_rect = pygame.Rect(goal_x, goal_y, TILE_SIZE, TILE_SIZE)
     pygame.draw.rect(screen, (0, 0, 255), goal_rect)
 
     pygame.display.flip()
