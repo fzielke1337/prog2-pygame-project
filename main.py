@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-from level import walls, start_x, start_y, goal_x, goal_y
+from level import walls, start_x, start_y, goal_rect
 from player import Player       
 from settings import WIDTH, HEIGHT, BACKGROUND_COLOR, WALL_COLOR, PLAYER_COLOR, TILE_SIZE, GOAL_COLOR
 
@@ -48,7 +48,6 @@ while running:
         pygame.draw.rect(screen, WALL_COLOR, wall)
 
     # Ziel darstellen
-    goal_rect = pygame.Rect(goal_x, goal_y, TILE_SIZE, TILE_SIZE)
     pygame.draw.rect(screen, GOAL_COLOR, goal_rect)
 
     # Meldung bei Ziel
