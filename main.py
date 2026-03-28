@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-from level import walls
+from level import walls, start_x, start_y
 from player import Player       
 from settings import WIDTH, HEIGHT, BACKGROUND_COLOR, WALL_COLOR, PLAYER_COLOR, TILE_SIZE
 
@@ -13,12 +13,12 @@ pygame.display.set_caption("PROG2 Spielprojekt")
 
 clock = pygame.time.Clock()
 
-player = Player(480, 60) #Start Position wird aus Level geholt
+player = Player(start_x, start_y) #Start Position wird aus Level geholt
 
 
 running = True
 while running:
-    moved = True
+    moved = False
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
