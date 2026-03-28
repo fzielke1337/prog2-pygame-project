@@ -22,13 +22,19 @@ walls = []
 for zeile_index, zeile in enumerate(level_map):
     start_x = 0
     start_y = 0
+    goal_x = 0
+    goal_y = 0
     for spalte_index, feld in enumerate(zeile):
         if feld == "S":
             start_x = spalte_index * TILE_SIZE
             start_y = zeile_index * TILE_SIZE
+        if feld == "Z":
+            goal_x = spalte_index * TILE_SIZE
+            goal_y = spalte_index * TILE_SIZE
         if feld == "#":
             x = spalte_index * TILE_SIZE
             y = zeile_index * TILE_SIZE
+
             wall = pygame.Rect(x, y, TILE_SIZE, TILE_SIZE)
             walls.append(wall)
 
