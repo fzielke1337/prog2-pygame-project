@@ -51,6 +51,11 @@ while running:
     goal_rect = pygame.Rect(goal_x, goal_y, TILE_SIZE, TILE_SIZE)
     pygame.draw.rect(screen, (0, 0, 255), goal_rect)
 
+    # Meldung bei Ziel
+    if player.rect.colliderect(goal_rect):
+        print("Level 1 geschafft!")
+        break
+
     pygame.display.flip()
     clock.tick(60)
 
