@@ -30,7 +30,7 @@ for zeile_index, zeile in enumerate(level_map):
             start_y = zeile_index * TILE_SIZE
         if feld == "Z":
             goal_x = spalte_index * TILE_SIZE
-            goal_y = spalte_index * TILE_SIZE
+            goal_y = zeile_index * TILE_SIZE
         if feld == "#":
             x = spalte_index * TILE_SIZE
             y = zeile_index * TILE_SIZE
