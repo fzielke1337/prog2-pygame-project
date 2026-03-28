@@ -38,3 +38,5 @@ for zeile_index, zeile in enumerate(level_map):
             wall = pygame.Rect(x, y, TILE_SIZE, TILE_SIZE)
             walls.append(wall)
 
+goal_rect = pygame.Rect(goal_x, goal_y, TILE_SIZE, TILE_SIZE)
+
