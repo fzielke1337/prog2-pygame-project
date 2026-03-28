@@ -17,15 +17,18 @@ level_map = [
 ]
 
 walls = []
-tile_size = TILE_SIZE
-
 
 # Wände aus Level-Map generieren (Durchläuft die Level-Map und erstellt für jedes Wand Feld # ein pygame.Rect Objekt)
 for zeile_index, zeile in enumerate(level_map):
+    start_x = 0
+    start_y = 0
     for spalte_index, feld in enumerate(zeile):
+        if feld == "S":
+            start_x = spalte_index * TILE_SIZE
+            start_y = zeile_index * TILE_SIZE
         if feld == "#":
-            x = spalte_index * tile_size
-            y = zeile_index * tile_size
-            wall = pygame.Rect(x, y, tile_size, tile_size)
+            x = spalte_index * TILE_SIZE
+            y = zeile_index * TILE_SIZE
+            wall = pygame.Rect(x, y, TILE_SIZE, TILE_SIZE)
             walls.append(wall)
 
