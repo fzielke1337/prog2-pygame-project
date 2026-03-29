@@ -53,10 +53,10 @@ settings.py (Hab ich mir noch nicht angeschaut)
 Soll anscheinend wichtig sein für Fenstergröße, Tilegröße, FPS.
 
 ## Florian
-box.py erstellen
+box.py erstellen    erledigt
+push logik einfügen
 ## Johanna
-level.py
-
+Frage: Was hat das Spiel noch? Muss man kisten gezielt auf bodenplatten schieben damit das Ziel benutzbar wird oder muss man nur boxen schieben um zum ziel zu kommen?
 offen: Assets finden
 
 Kisten und und und
