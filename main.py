@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-from level import walls, start_x, start_y, goal_rect
+from level import walls, boxes, start_x, start_y, goal_rect
 from player import Player       
 from settings import WIDTH, HEIGHT, BACKGROUND_COLOR, WALL_COLOR, PLAYER_COLOR, TILE_SIZE, GOAL_COLOR
 
@@ -46,6 +46,9 @@ while running:
     # Wände darstellen
     for wall in walls:                              #Jeder durchgang werden die Wände gezeichnet
         pygame.draw.rect(screen, WALL_COLOR, wall)
+
+    for box in boxes:                               
+        box.draw(screen)                            # kein pygame.draw.rect nötigt weil box sich selber zeichnet als objekt. alle angaben sind hinterlegt in box
 
     # Ziel darstellen
     pygame.draw.rect(screen, GOAL_COLOR, goal_rect)
