@@ -21,18 +21,6 @@ Dabei soll jedes Level andere Schwierigkeiten und Überraschungen bereithalten. 
 - Rutsch-Level, Blob bewegt sich nicht mehr Kästchenweise, sondern Bewegung läuft automatisch und flüssig weiter
 - Telepotations- oder Farbfelder, Schlüssel- und Schlossfelder oder ähnliches 
 
-Aufgabenverteilung?!
-Zur Aufteilung, damit main.py nicht Kraut und Rüben wird, sollten wir alle Parts ob Level oder Spieler, Kisten etc. in Dateien auslagern. Die können wir mit game.py alle einfach miteinander verbinden bzw. einbinden.
-
-Beispiel der Dateien:
-Für Sokoban würde ich erstmal diese .py-Dateien anlegen:
-
-## main.py
-## game.py
-## player.py
-## level.py
-## box.py
-## settings.py
 
 main.py
 Startet einfach nur das Spiel
@@ -49,14 +37,6 @@ Alles rund um das Spielfeld herum was damit zusammen hängt. Map, Wände, Ziele,
 box.py
 Kisten separat, damit wir das Verhalten nicht in player oder level quetschen müssen?! ggf später andere Sorten noch ergänzen
 
-settings.py (Hab ich mir noch nicht angeschaut)
-Soll anscheinend wichtig sein für Fenstergröße, Tilegröße, FPS.
+settings.py 
+Fenstergröße, Tilegröße, FPS.
 
-## Florian
-box.py erstellen    erledigt
-push logik einfügen
-## Johanna
-Frage: Was hat das Spiel noch? Muss man kisten gezielt auf bodenplatten schieben damit das Ziel benutzbar wird oder muss man nur boxen schieben um zum ziel zu kommen?
-offen: Assets finden
-
-Kisten und und und
